@@ -6,7 +6,13 @@
 /*   By: chales <chales@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 14:42:01 by chales            #+#    #+#             */
-/*   Updated: 2023/03/03 14:42:06 by chales           ###   ########.fr       */
+/*   Updated: 2023/03/03 14:49:40 by chales           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
+
+# include "libft/libft.h"
+
+#endif
