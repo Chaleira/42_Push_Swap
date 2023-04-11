@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 23:16:54 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/10 23:39:21 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/11 19:36:35 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		while (go->next)
 			go = go->next;
 		go->next = new;
-		new->previous = go;
 		new->next = NULL;
 	}
 }
@@ -36,9 +35,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	if (!lst || !new)
 		return ;
 	new->next = *lst;
-	new->previous = NULL;
 	*lst = new;
-	(*lst)->next->previous = *lst;
 }
 
 t_list	*ft_lstlast(t_list *lst)
@@ -59,7 +56,6 @@ t_list	*ft_lstnew(void *content)
 		return (0);
 	root->content = content;
 	root->next = NULL;
-	root->previous = NULL;
 	return (root);
 }
 

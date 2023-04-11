@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: chales <chales@student.42.fr>              +#+  +:+       +#+         #
+#    By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/03 14:41:56 by chales            #+#    #+#              #
-#    Updated: 2023/03/03 14:47:06 by chales           ###   ########.fr        #
+#    Updated: 2023/04/11 21:33:35 by plopes-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,17 @@ NAME = push_swap
 
 LIBFT = libft/libft.a
 
-SRCS = push_swap.c
+SRCS = 	push_swap.c \
+		utils/list_manipulation.c \
+		utils/parsing.c \
+		utils/push.c \
+		utils/reverse_rotate.c \
+		utils/rotate.c \
+		utils/swap.c \
+		utils/free.c \
+		utils/utils.c
 
-OBJS = push_swap.o
+OBJS = $(SRCS:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror
 

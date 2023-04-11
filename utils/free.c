@@ -1,46 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/11 00:32:23 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/11 21:35:57 by plopes-c         ###   ########.fr       */
+/*   Created: 2023/04/11 20:28:09 by plopes-c          #+#    #+#             */
+/*   Updated: 2023/04/11 21:36:23 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void	rotate(t_stack *stack)
+void	list_free(t_list *lst)
 {
+	t_list	*ptr;
 	t_list	*last;
 
-	last = stack->head;
-	while (last->next != NULL)
+	if (!lst)
+		return ;
+	ptr = lst;
+	while (ptr)
 	{
-		last = last->next;
+		last = ptr;
+		ptr = ptr->next;
+		free(last);
 	}
-	last->next = stack->head;
-	stack->head = stack->head->next;
-	last->next->next = NULL;
-}
-
-void	ra(t_stack *stack_a)
-{
-	rotate(stack_a);
-	write(1, "ra\n", 3);
-}
-
-void	rb(t_stack *stack_b)
-{
-	rotate(stack_b);
-	write(1, "rb\n", 3);
-}
-
-void	rr(t_stack *stack_a, t_stack *stack_b)
-{
-	rotate(stack_a);
-	rotate(stack_b);
-	write(1, "rr\n", 3);
+	lst = NULL;
 }
