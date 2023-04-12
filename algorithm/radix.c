@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   radix.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/03 14:41:58 by chales            #+#    #+#             */
-/*   Updated: 2023/04/12 21:28:19 by plopes-c         ###   ########.fr       */
+/*   Created: 2023/04/12 20:37:04 by plopes-c          #+#    #+#             */
+/*   Updated: 2023/04/12 22:09:06 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-int	main(int argc, char *argv[])
+void	stack_find_max(t_stack *stack)
 {
-	static t_stack	stack_a;
-	static t_stack	stack_b;
+	t_list	*list;
+	int		max;
 
-	if (argc < 2)
+	max = 0;
+	list = stack->head;
+	max = (int)(long)list->content;
+	while (list != NULL)
 	{
-		ft_printf("Invalid Stack!\n");
-		return (1);
+		if (max < (int)(long)list->content)
+			max = (int)(long)list->content;
+		list = list->next;
 	}
-	stack_init(argv, &stack_a);
-	stack_find_max(&stack_a);
-	stack_print(&stack_a, &stack_b);
-	list_free(stack_a.head);
-	list_free(stack_b.head);
+	stack->num_max = max;
+	ft_printf("MAX: %i\n", stack->num_max);
 }

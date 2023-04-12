@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 17:23:43 by plopes-c          #+#    #+#             */
-/*   Updated: 2022/10/28 20:34:09 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/12 21:35:29 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	s = 1;
 	nbr = 0;
+	if (!ft_strncmp(nptr, "-2147483648", 11))
+		return (-2147483648);
 	while (nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
 		i++;
 	if (nptr[i] == '+' || nptr[i] == '-')

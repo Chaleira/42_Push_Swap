@@ -6,7 +6,7 @@
 #    By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/03 14:41:56 by chales            #+#    #+#              #
-#    Updated: 2023/04/11 21:33:35 by plopes-c         ###   ########.fr        #
+#    Updated: 2023/04/12 20:41:52 by plopes-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ SRCS = 	push_swap.c \
 		utils/rotate.c \
 		utils/swap.c \
 		utils/free.c \
-		utils/utils.c
+		utils/utils.c \
+		algorithm/radix.c
 
 OBJS = $(SRCS:.c=.o)
 

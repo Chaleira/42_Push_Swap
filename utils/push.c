@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 00:12:52 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/11 14:41:46 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/12 16:22:30 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ static	void	push(t_stack *src, t_stack *dest)
 {
 	t_list	*temp;
 
+	if (!src->head)
+		return ;
 	temp = src->head;
 	src->head = src->head->next;
 	ft_lstadd_front(&dest->head, temp);

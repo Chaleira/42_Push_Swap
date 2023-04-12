@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 00:32:23 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/11 21:35:57 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/12 16:16:57 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ static void	rotate(t_stack *stack)
 {
 	t_list	*last;
 
+	if (!stack->head)
+		return ;
 	last = stack->head;
 	while (last->next != NULL)
 	{

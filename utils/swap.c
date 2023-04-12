@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 23:40:34 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/11 21:25:29 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/12 16:18:02 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ static void	swap(t_stack *stack)
 {
 	int	n;
 
+	if (!stack->head)
+		return ;
 	n = (int)(intptr_t)stack->head->content;
 	stack->head->content = stack->head->next->content;
 	stack->head->next->content = (void *)(intptr_t)n;
