@@ -6,7 +6,7 @@
 #    By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/03 14:41:56 by chales            #+#    #+#              #
-#    Updated: 2023/04/18 22:08:13 by plopes-c         ###   ########.fr        #
+#    Updated: 2023/04/18 22:38:17 by plopes-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ RM = rm -fr
 all : $(NAME)
 
 $(NAME):		$(OBJS)
-				@make -s -C libft
+				@make bonus -s -C libft
 				@gcc $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
 
 clean:			
