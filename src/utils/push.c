@@ -6,11 +6,11 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 00:12:52 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/12 16:22:30 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/18 20:25:13 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 static	void	push(t_stack *src, t_stack *dest)
 {

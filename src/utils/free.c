@@ -6,11 +6,11 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:28:09 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/11 21:36:23 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/18 20:25:04 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	list_free(t_list *lst)
 {

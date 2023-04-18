@@ -6,19 +6,18 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 14:42:01 by chales            #+#    #+#             */
-/*   Updated: 2023/04/12 22:08:45 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/18 22:08:21 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "libft/libft.h"
+# include "../libft/libft.h"
 
 typedef struct s_stack
 {
 	t_list	*head;
-	t_list	*end;
 	int		len;
 	int		num_max;
 	int		len_max;

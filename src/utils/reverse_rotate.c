@@ -1,48 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/11 00:32:23 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/12 16:16:57 by plopes-c         ###   ########.fr       */
+/*   Created: 2023/04/11 15:16:57 by plopes-c          #+#    #+#             */
+/*   Updated: 2023/04/18 20:25:16 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-static void	rotate(t_stack *stack)
+static void	reverse(t_stack *stack)
 {
 	t_list	*last;
+	t_list	*second_last;
 
 	if (!stack->head)
 		return ;
 	last = stack->head;
 	while (last->next != NULL)
 	{
+		second_last = last;
 		last = last->next;
 	}
 	last->next = stack->head;
-	stack->head = stack->head->next;
-	last->next->next = NULL;
+	second_last->next = NULL;
+	stack->head = last;
 }
 
-void	ra(t_stack *stack_a)
+void	rra(t_stack *stack_a)
 {
-	rotate(stack_a);
-	write(1, "ra\n", 3);
+	reverse(stack_a);
+	write(1, "rra\n", 4);
 }
 
-void	rb(t_stack *stack_b)
+void	rrb(t_stack *stack_b)
 {
-	rotate(stack_b);
-	write(1, "rb\n", 3);
+	reverse(stack_b);
+	write(1, "rrb\n", 4);
 }
 
-void	rr(t_stack *stack_a, t_stack *stack_b)
+void	rrr(t_stack *stack_a, t_stack *stack_b)
 {
-	rotate(stack_a);
-	rotate(stack_b);
-	write(1, "rr\n", 3);
+	reverse(stack_a);
+	reverse(stack_b);
+	write(1, "rrr\n", 4);
 }

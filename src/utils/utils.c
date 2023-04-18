@@ -6,11 +6,11 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 21:29:23 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/12 21:50:50 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/18 20:25:52 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	stack_print(t_stack *stack_a, t_stack *stack_b)
 {

@@ -6,7 +6,7 @@
 #    By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/03 14:41:56 by chales            #+#    #+#              #
-#    Updated: 2023/04/12 20:41:52 by plopes-c         ###   ########.fr        #
+#    Updated: 2023/04/18 22:08:13 by plopes-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,20 +14,13 @@ NAME = push_swap
 
 LIBFT = libft/libft.a
 
-SRCS = 	push_swap.c \
-		utils/list_manipulation.c \
-		utils/parsing.c \
-		utils/push.c \
-		utils/reverse_rotate.c \
-		utils/rotate.c \
-		utils/swap.c \
-		utils/free.c \
-		utils/utils.c \
-		algorithm/radix.c
+SRCS = $(shell find src/ -name '*.c')
 
 OBJS = $(SRCS:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror
+INCLUDES = -I./includes
+
+CFLAGS = -Wall -Wextra -Werror -fPIE $(INCLUDES)
 
 RM = rm -fr
 
