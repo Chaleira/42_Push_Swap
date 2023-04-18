@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 14:41:58 by chales            #+#    #+#             */
-/*   Updated: 2023/04/17 21:21:03 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/18 22:45:34 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	main(int argc, char *argv[])
 	}
 	stack_init(argv, &stack_a);
 	stack_find_max(&stack_a);
+	pb(&stack_a, &stack_b);
 	stack_print(&stack_a, &stack_b);
 	list_free(stack_a.head);
 	list_free(stack_b.head);
