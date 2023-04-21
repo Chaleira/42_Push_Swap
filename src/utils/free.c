@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:28:09 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/18 20:25:04 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/21 13:46:31 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,10 @@ void	list_free(t_list *lst)
 		free(last);
 	}
 	lst = NULL;
+}
+
+void	free_lists(void)
+{
+	list_free(stack_a()->head);
+	list_free(stack_b()->head);
 }

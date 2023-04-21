@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 00:12:52 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/18 20:25:13 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/21 16:17:06 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ static	void	push(t_stack *src, t_stack *dest)
 	ft_lstadd_front(&dest->head, temp);
 }
 
-void	pa(t_stack *stack_a, t_stack *stack_b)
+void	pa()
 {
-	push(stack_b, stack_a);
+	push(stack_b(), stack_a());
 	write(1, "pa\n", 3);
 }
 
-void	pb(t_stack *stack_a, t_stack *stack_b)
+void	pb()
 {
-	push(stack_a, stack_b);
+	push(stack_a(), stack_b());
 	write(1, "pb\n", 3);
 }

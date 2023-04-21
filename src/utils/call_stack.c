@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   call_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/03 14:41:58 by chales            #+#    #+#             */
-/*   Updated: 2023/04/21 17:06:03 by plopes-c         ###   ########.fr       */
+/*   Created: 2023/04/21 13:38:25 by plopes-c          #+#    #+#             */
+/*   Updated: 2023/04/21 13:40:15 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char *argv[])
+t_stack	*stack_a(void)
 {
-	(void)argv;
-	if (argc < 2)
-		error_msg("Error! Invalid Stack!");
-	stack_init(argv);
-	stack_print(stack_a(), stack_b());
-	simple_sort();
-	stack_print(stack_a(), stack_b());
-	free_lists();
+	static t_stack	stack;
+
+	return (&stack);
+}
+
+t_stack	*stack_b(void)
+{
+	static t_stack	stack;
+
+	return (&stack);
 }

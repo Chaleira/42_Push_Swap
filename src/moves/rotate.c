@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 00:32:23 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/18 20:25:18 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/21 16:15:58 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,21 @@ static void	rotate(t_stack *stack)
 	last->next->next = NULL;
 }
 
-void	ra(t_stack *stack_a)
+void	ra()
 {
-	rotate(stack_a);
+	rotate(stack_a());
 	write(1, "ra\n", 3);
 }
 
-void	rb(t_stack *stack_b)
+void	rb()
 {
-	rotate(stack_b);
+	rotate(stack_b());
 	write(1, "rb\n", 3);
 }
 
-void	rr(t_stack *stack_a, t_stack *stack_b)
+void	rr()
 {
-	rotate(stack_a);
-	rotate(stack_b);
+	rotate(stack_a());
+	rotate(stack_b());
 	write(1, "rr\n", 3);
 }
