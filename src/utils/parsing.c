@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 15:39:17 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/21 15:54:57 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/21 19:54:48 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ void	stack_init(char **num)
 		}
 		i++;
 	}
-	stack_find_max(stack_a());
-	max_len(stack_a());
+	// stack_find_max(stack_a());
+	// max_len(stack_a());
 }

@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 14:42:01 by chales            #+#    #+#             */
-/*   Updated: 2023/04/21 16:57:59 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/21 19:29:32 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "libft.h"
+# include <stdint.h>
 
 typedef struct s_stack
 {
@@ -48,7 +49,8 @@ void	check_max_min(char *num);
 int		get_num(char *num);
 void	error_msg(char *error);
 int		max_len(t_stack *stack);
-void	simple_sort(void);
 int		is_sorted(t_stack *stack);
+void	radix();
+
 
 #endif
