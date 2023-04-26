@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 16:38:23 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/21 19:39:45 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/26 07:32:44 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ int	is_sorted(t_stack *stack)
 	temp = stack->head;
 	while (temp->next)
 	{
-		if (temp->content < temp->next->content)
+		if (temp->content > temp->next->content)
 			return (1);
 		temp = temp->next;
 	}
-	return (0);
+	if (!stack_b()->head)
+		exit(EXIT_SUCCESS);
+	return (1);
 }

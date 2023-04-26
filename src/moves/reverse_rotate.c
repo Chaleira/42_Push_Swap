@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 15:16:57 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/21 16:16:36 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/26 05:44:40 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,19 @@ static void	reverse(t_stack *stack)
 	stack->head = last;
 }
 
-void	rra()
+void	rra(void)
 {
 	reverse(stack_a());
 	write(1, "rra\n", 4);
 }
 
-void	rrb()
+void	rrb(void)
 {
 	reverse(stack_b());
 	write(1, "rrb\n", 4);
 }
 
-void	rrr()
+void	rrr(void)
 {
 	reverse(stack_a());
 	reverse(stack_b());

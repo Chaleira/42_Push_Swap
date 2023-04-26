@@ -1,48 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   sort_5.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/11 00:32:23 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/26 05:45:04 by plopes-c         ###   ########.fr       */
+/*   Created: 2023/04/26 05:51:30 by plopes-c          #+#    #+#             */
+/*   Updated: 2023/04/26 08:41:01 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	rotate(t_stack *stack)
+void	min_to_stack_b(int times)
 {
-	t_list	*last;
+	int	i;
+	int	count;
 
-	if (!stack->head)
-		return ;
-	last = stack->head;
-	while (last->next != NULL)
+	count = 0;
+	while (count < times)
 	{
-		last = last->next;
+		if (stack_a()->min_pos < stack_a()->len / 2)
+		{
+			i = 0;
+			while (i++ < stack_a()->min_pos)
+				ra();
+		}
+		else
+		{
+			i = stack_a()->len;
+			while (i-- > stack_a()->min_pos)
+				rra();
+		}
+		pb();
+		get_values();
+		count++;
 	}
-	last->next = stack->head;
-	stack->head = stack->head->next;
-	last->next->next = NULL;
 }
 
-void	ra(void)
+void	sort_4(void)
 {
-	rotate(stack_a());
-	write(1, "ra\n", 3);
+	min_to_stack_b(1);
+	sort_3();
+	pa();
 }
 
-void	rb(void)
+void	sort_5(void)
 {
-	rotate(stack_b());
-	write(1, "rb\n", 3);
-}
-
-void	rr(void)
-{
-	rotate(stack_a());
-	rotate(stack_b());
-	write(1, "rr\n", 3);
+	min_to_stack_b(2);
+	sort_3();
+	pa();
+	pa();
 }

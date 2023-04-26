@@ -6,54 +6,54 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 20:37:04 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/21 20:02:51 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/26 08:58:53 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	stack_find_max(t_stack *stack)
-{
-	t_list	*list;
-	int		max;
-
-	max = 0;
-	list = stack->head;
-	max = (intptr_t)list->content;
-	while (list != NULL)
-	{
-		if (max < (intptr_t)list->content)
-			max = (intptr_t)list->content;
-		list = list->next;
-	}
-	stack->num_max = max;
-	ft_printf("MAX: %i\n", stack->num_max);
-	return (max);
-}
-
-void radix()
+void	radix(void)
 {
 	int		bit;
+	int		bit_max;
 	int		len_a;
 
 	bit = 0;
-	while (bit < 32)
+	bit_max = max_bit();
+	if (stack_a()->len < 50)
+		sort_under_50();
+	while (bit <= bit_max)
 	{
-		if (!is_sorted(stack_a()))
-			break ;
+		is_sorted(stack_a());
 		len_a = ft_lstsize(stack_a()->head);
 		while (len_a > 0)
 		{
-			if (!is_sorted(stack_a()))
-				break ;
+			is_sorted(stack_a());
 			if ((intptr_t)stack_a()->head->content & (1 << bit))
-				pb();
-			else
 				ra();
+			else
+				pb();
 			len_a--;
 		}
 		while (stack_b()->head)
 			pa();
 		bit++;
 	}
+}
+
+int	max_bit(void)
+{
+	int	i;
+
+	i = 31;
+	while (!(stack_a()->num_max & (1 << i)) && i > 0)
+		i--;
+	return (i);
+}
+
+void	sort_under_50(void)
+{
+	min_to_stack_b(stack_a()->len - 1);
+	while (stack_b()->head)
+		pa();
 }
