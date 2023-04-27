@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 20:37:04 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/26 08:58:53 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/27 16:58:32 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	radix(void)
 	while (bit <= bit_max)
 	{
 		is_sorted(stack_a());
-		len_a = ft_lstsize(stack_a()->head);
+		len_a = stack_a()->len;
 		while (len_a > 0)
 		{
 			is_sorted(stack_a());

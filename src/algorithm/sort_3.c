@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 04:19:47 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/26 08:00:05 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/27 14:45:15 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,17 @@ void	sort_3(void)
 	int	c;
 
 	c = 0;
-	a = (int)(intptr_t)stack_a()->head->content;
-	b = (int)(intptr_t)stack_a()->head->next->content;
+	b = 0;
+	a = 0;
+	if (stack_a()->head)
+		a = (int)(intptr_t)stack_a()->head->content;
+	if (stack_a()->len > 1)
+		b = (int)(intptr_t)stack_a()->head->next->content;
 	if (stack_a()->len > 2)
 		c = (int)(intptr_t)stack_a()->head->next->next->content;
 	if (a > b && stack_a()->len == 2)
 		sa();
-	else if (c)
+	else
 		sort_3_aux(a, b, c);
 }
 

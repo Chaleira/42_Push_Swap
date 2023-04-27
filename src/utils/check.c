@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 12:34:08 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/26 04:58:40 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/27 15:09:43 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	check_repeat(t_stack *stack, int num)
 	while (list != NULL)
 	{
 		if ((int)(long)list->content == num)
-			error_msg("Error! Repeated Character Found!\n");
+			error_msg("Error\n");
 		list = list->next;
 	}
 }
@@ -35,7 +35,7 @@ void	check_digit(char *num)
 	while (num[i])
 	{
 		if (!ft_isdigit(num[i]))
-			error_msg("Error! Invalid Character Found!\n");
+			error_msg("Error\n");
 		i++;
 	}
 }
@@ -48,10 +48,15 @@ void	check_max_min(char *num)
 	if (num[0] == '-')
 	{
 		if (len > 11 || (len == 11 && ft_strncmp(num, "-2147483648", 50) > 0))
-			error_msg("Error! Number Too Small!\n");
+			error_msg("Error\n");
+	}
+	else if (num[0] == '+')
+	{
+		if (len > 11 || (len == 11 && ft_strncmp(num, "+2147483647", 50) > 0))
+			error_msg("Error\n");
 	}
 	else if (len > 10 || (len == 10 && ft_strncmp(num, "2147483647", 50) > 0))
-		error_msg("Error! Number Too Big!\n");
+		error_msg("Error\n");
 }
 
 int	get_num(char *num)

@@ -24,6 +24,9 @@ int	is_sorted(t_stack *stack)
 		temp = temp->next;
 	}
 	if (!stack_b()->head)
+	{
+		free_lists();
 		exit(EXIT_SUCCESS);
+	}
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 14:42:01 by chales            #+#    #+#             */
-/*   Updated: 2023/04/26 08:56:50 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/27 16:53:57 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void	rra(void);
 void	rrb(void);
 void	rrr(void);
 void	stack_init(char **num);
+void	free_split(char **str);
 void	list_free(t_list *lst);
 void	free_lists(void);
 int		stack_find_max_min(t_stack *stack);
@@ -62,6 +63,6 @@ void	get_values(void);
 void	sort_10(void);
 int		max_bit(void);
 void	sort_under_50(void);
-// void	stack_print(t_stack *stack_a, t_stack *stack_b);
+void	stack_print(t_stack *stack_a, t_stack *stack_b);
 
 #endif

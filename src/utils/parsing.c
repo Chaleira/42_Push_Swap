@@ -6,17 +6,19 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 15:39:17 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/26 08:02:06 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/27 16:45:30 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// #define DEBUG1
+
 void	stack_init(char **num)
 {
 	int		i;
 
-	i = 1;
+	i = 0;
 	while (num[i] != NULL)
 	{
 		if (num[i][0])
@@ -26,9 +28,8 @@ void	stack_init(char **num)
 		}
 		i++;
 	}
-	is_sorted(stack_a());
-	get_values();
-}
+	free_split(num);
+	}
 
 // ft_printf("MAX_NUM_LEN: %i\nMIN_POS: %i\nMAX: %i\nMIN: %i\nLEN: %i\n",
 		// stack_a()->len_max, stack_a()->min_pos, stack_a()->num_max
