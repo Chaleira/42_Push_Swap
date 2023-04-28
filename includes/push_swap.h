@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 14:42:01 by chales            #+#    #+#             */
-/*   Updated: 2023/04/27 16:53:57 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/28 03:08:46 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ void	get_values(void);
 void	sort_10(void);
 int		max_bit(void);
 void	sort_under_50(void);
-void	stack_print(t_stack *stack_a, t_stack *stack_b);
+void	stack_print(t_stack *stack);
+void	negatives_to_b(void);
 
 #endif

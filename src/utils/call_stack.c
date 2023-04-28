@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 13:38:25 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/21 13:40:15 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/28 02:32:59 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,18 @@ t_stack	*stack_b(void)
 	static t_stack	stack;
 
 	return (&stack);
+}
+
+void	stack_print(t_stack *stack)
+{
+	t_list	*list;
+
+	ft_printf("\nSTACK:\n");
+	list = stack->head;
+	while (list != NULL)
+	{
+		ft_printf("%d ", (int)(intptr_t)list->content);
+		list = list->next;
+	}
+	ft_printf("\n");
 }

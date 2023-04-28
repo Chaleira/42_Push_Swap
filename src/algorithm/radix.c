@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 20:37:04 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/27 16:58:32 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/04/28 03:22:46 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ void	radix(void)
 
 	bit = 0;
 	bit_max = max_bit();
-	if (stack_a()->len < 50)
+	if (stack_a()->len <= 11)
 		sort_under_50();
+	// if (stack_a()->num_min < 0)
 	while (bit <= bit_max)
 	{
 		is_sorted(stack_a());
@@ -56,4 +57,17 @@ void	sort_under_50(void)
 	min_to_stack_b(stack_a()->len - 1);
 	while (stack_b()->head)
 		pa();
+}
+
+void	negatives_to_b(void)
+{
+	t_list	*temp;
+
+	temp = stack_a()->head;
+	while (temp)
+	{
+		if ((int)(intptr_t)temp->content < 0)
+			pb();
+		temp = temp->next;
+	}
 }
