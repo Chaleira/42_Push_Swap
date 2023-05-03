@@ -6,11 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 20:37:04 by plopes-c          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2023/05/03 20:07:31 by plopes-c         ###   ########.fr       */
-=======
-/*   Updated: 2023/04/28 03:22:46 by plopes-c         ###   ########.fr       */
->>>>>>> c72e122965fc7449e8a27038cc29df4459355e2d
+/*   Updated: 2023/05/03 20:27:22 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +22,6 @@ void	radix(void)
 	bit_max = max_bit();
 	if (stack_a()->len <= 11)
 		sort_under_50();
-	// if (stack_a()->num_min < 0)
 	while (bit <= bit_max)
 	{
 		is_sorted(stack_a());
