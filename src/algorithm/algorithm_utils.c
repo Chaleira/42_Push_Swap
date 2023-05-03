@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 05:56:47 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/26 07:21:49 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/05/03 19:11:47 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	stack_find_max_min(t_stack *stack)
 	}
 	stack->num_max = max;
 	stack->num_min = min;
-	max_len_num(stack);
 	find_min_pos(stack);
 	return (max);
 }

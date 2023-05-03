@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 05:51:30 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/27 16:47:19 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/05/03 19:03:17 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,41 @@
 
 void	min_to_stack_b(int times)
 {
-	int	i;
 	int	count;
 
 	count = 0;
 	while (count < times)
 	{
-		if (stack_a()->min_pos < stack_a()->len / 2)
-		{
-			i = 0;
-			while (i++ < stack_a()->min_pos)
-				ra();
-		}
-		else
-		{
-			i = stack_a()->len;
-			while (i-- > stack_a()->min_pos)
-				rra();
-		}
+		min_to_stack_b_aux();
+		is_sorted(stack_a());
 		pb();
 		get_values();
 		count++;
+	}
+}
+
+void	min_to_stack_b_aux(void)
+{
+	int	i;
+
+	is_sorted(stack_a());
+	if (stack_a()->min_pos < stack_a()->len / 2)
+	{
+		i = 0;
+		while (i++ < stack_a()->min_pos)
+		{
+			is_sorted(stack_a());
+			ra();
+		}
+	}
+	else
+	{
+		i = stack_a()->len;
+		while (i-- > stack_a()->min_pos)
+		{
+			is_sorted(stack_a());
+			rra();
+		}
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:28:09 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/04/21 13:46:31 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/05/03 17:16:22 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,19 @@ void	free_lists(void)
 {
 	list_free(stack_a()->head);
 	list_free(stack_b()->head);
+}
+
+void	free_split(char **str)
+{
+	int	i;
+
+	i = 0;
+	if (!str)
+		return ;
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
 }
