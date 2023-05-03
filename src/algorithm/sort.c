@@ -6,7 +6,7 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 16:38:23 by plopes-c          #+#    #+#             */
-/*   Updated: 2023/05/03 20:27:44 by plopes-c         ###   ########.fr       */
+/*   Updated: 2023/05/03 20:47:25 by plopes-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ int	is_sorted(t_stack *stack)
 	}
 	if (!stack_b()->head && stack_a()->head)
 	{
-		stack_print(stack_a());
-		stack_print(stack_b());
 		free_lists();
 		exit(EXIT_SUCCESS);
 	}
