@@ -6,7 +6,11 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 21:29:23 by plopes-c          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/05/03 19:58:13 by plopes-c         ###   ########.fr       */
+=======
+/*   Updated: 2023/04/28 01:45:02 by plopes-c         ###   ########.fr       */
+>>>>>>> c72e122965fc7449e8a27038cc29df4459355e2d
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +52,7 @@ void	get_values(void)
 // 	t_list	*list_b;
 // 	int		len;
 
+<<<<<<< HEAD
 // 	ft_printf("\nSTAKCS:\n\n");
 // 	list_a = stack_a->head;
 // 	list_b = stack_b->head;
@@ -85,3 +90,14 @@ void	get_values(void)
 // {
 // 	ft_printf("HERE!!!\n");
 // }
+=======
+	i = 0;
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	if (str)
+		free(str);
+}
+>>>>>>> c72e122965fc7449e8a27038cc29df4459355e2d

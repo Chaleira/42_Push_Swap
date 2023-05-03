@@ -6,7 +6,11 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 12:34:08 by plopes-c          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/05/03 19:43:45 by plopes-c         ###   ########.fr       */
+=======
+/*   Updated: 2023/04/28 02:33:19 by plopes-c         ###   ########.fr       */
+>>>>>>> c72e122965fc7449e8a27038cc29df4459355e2d
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +23,7 @@ void	check_repeat(t_stack *stack, int num)
 	list = stack->head;
 	while (list != NULL)
 	{
-		if ((int)(long)list->content == num)
+		if ((int)(intptr_t)list->content == num)
 			error_msg("Error\n");
 		list = list->next;
 	}
@@ -63,6 +67,8 @@ int	get_num(char *num)
 {
 	int	input;
 
+	if (!num)
+		error_msg("Error\n");
 	check_digit(num);
 	check_max_min(num);
 	input = ft_atoi(num);

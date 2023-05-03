@@ -6,7 +6,11 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 14:42:01 by chales            #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/05/03 19:56:24 by plopes-c         ###   ########.fr       */
+=======
+/*   Updated: 2023/04/28 03:08:46 by plopes-c         ###   ########.fr       */
+>>>>>>> c72e122965fc7449e8a27038cc29df4459355e2d
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +67,14 @@ void	min_to_stack_b(int times);
 void	min_to_stack_b_aux(void);
 void	get_values(void);
 int		max_bit(void);
+<<<<<<< HEAD
 void	new_value(void);
 // void	stack_print(t_stack *stack_a, t_stack *stack_b);
 // void	debug(void);
+=======
+void	sort_under_50(void);
+void	stack_print(t_stack *stack);
+void	negatives_to_b(void);
+>>>>>>> c72e122965fc7449e8a27038cc29df4459355e2d
 
 #endif

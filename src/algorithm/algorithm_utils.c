@@ -6,7 +6,11 @@
 /*   By: plopes-c <plopes-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 05:56:47 by plopes-c          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/05/03 19:11:47 by plopes-c         ###   ########.fr       */
+=======
+/*   Updated: 2023/04/28 02:49:59 by plopes-c         ###   ########.fr       */
+>>>>>>> c72e122965fc7449e8a27038cc29df4459355e2d
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +22,7 @@ int	stack_find_max_min(t_stack *stack)
 	int		max;
 	int		min;
 
-	max = 0;
+	max = -2147483648;
 	min = 2147483647;
 	list = stack->head;
 	if (!list)
@@ -26,10 +30,10 @@ int	stack_find_max_min(t_stack *stack)
 	max = (intptr_t)list->content;
 	while (list != NULL)
 	{
-		if (max < (intptr_t)list->content)
-			max = (intptr_t)list->content;
-		if (min > (intptr_t)list->content)
-			min = (intptr_t)list->content;
+		if (max < (int)(intptr_t)list->content)
+			max = (int)(intptr_t)list->content;
+		if (min > (int)(intptr_t)list->content)
+			min = (int)(intptr_t)list->content;
 		list = list->next;
 	}
 	stack->num_max = max;
