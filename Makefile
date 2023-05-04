@@ -14,7 +14,12 @@ NAME = push_swap
 
 LIBFT = libft/libft.a
 
-SRCS = $(shell find src/ -name '*.c')
+SRCS =	src/push_swap.c src/algorithm/algorithm_utils.c src/algorithm/radix.c \
+		src/algorithm/sort_10.c src/algorithm/sort_3.c src/algorithm/sort_5.c \
+		src/algorithm/sort.c src/moves/push.c src/moves/reverse_rotate.c \
+		src/moves/rotate.c src/moves/swap.c src/utils/call_stack.c \
+		src/utils/check.c src/utils/free.c src/utils/parsing.c \
+		src/utils/utils.c
 
 OBJS = $(SRCS:.c=.o)
 

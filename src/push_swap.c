@@ -14,8 +14,7 @@
 
 int	main(int argc, char *argv[])
 {
-	if (argc == 1)
-		error_msg("Error\n");
+	(void)argc;
 	while (*(argv + 1))
 	{
 		(stack_a())->num = ft_split(*(argv + 1), ' ');

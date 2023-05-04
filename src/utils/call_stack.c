@@ -25,17 +25,3 @@ t_stack	*stack_b(void)
 
 	return (&stack);
 }
-
-void	stack_print(t_stack *stack)
-{
-	t_list	*list;
-
-	ft_printf("\nSTACK:\n");
-	list = stack->head;
-	while (list != NULL)
-	{
-		ft_printf("%d ", (int)(intptr_t)list->content);
-		list = list->next;
-	}
-	ft_printf("\n");
-}

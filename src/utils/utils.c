@@ -80,8 +80,3 @@ void	get_values(void)
 // 		ft_printf(" ");
 // 	ft_printf("   b\n");
 // }
-
-// void	debug(void)
-// {
-// 	ft_printf("HERE!!!\n");
-// }

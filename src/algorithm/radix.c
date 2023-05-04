@@ -57,16 +57,3 @@ void	sort_under_50(void)
 	while (stack_b()->head)
 		pa();
 }
-
-void	negatives_to_b(void)
-{
-	t_list	*temp;
-
-	temp = stack_a()->head;
-	while (temp)
-	{
-		if ((int)(intptr_t)temp->content < 0)
-			pb();
-		temp = temp->next;
-	}
-}
